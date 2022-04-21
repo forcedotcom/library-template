@@ -27,7 +27,9 @@ workflows:
           filters:
             branches:
               only: main
-          context: CLI_CTC
+          context:
+            - CLI_CTC
+            - salesforce-cli
   dependabot-automerge:
     triggers:
       - schedule:
@@ -37,4 +39,5 @@ workflows:
               only:
                 - main
     jobs:
-      - release-management/dependabot-automerge
+      - release-management/dependabot-automerge:
+          context: salesforce-cli
