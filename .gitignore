@@ -27,6 +27,11 @@ docs
 # -- CLEAN ALL
 node_modules
 
+
+.eslintcache
+.wireit
+*.tsbuildinfo
+
 # --
 # put files here you don't want cleaned with sf-clean
 
